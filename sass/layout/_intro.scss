@@ -1,0 +1,54 @@
+.intro {
+    margin-top: -1rem;
+    background-image: url("../images/png/site-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1920px 604px;
+    margin-bottom: 8rem;
+    @include responsive(tables) {
+        background-size: 1320px 450px;
+    }
+    @include responsive(phone) {
+        background-size: 900px 440px;
+    }
+    @include responsive(m-phone) {
+        background-image: none;
+        background-color: $primary-color;
+    }
+    &__text-wrapper {
+        padding-top: 19.2rem;
+        padding-bottom: 19.3rem;
+        @include container;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        @include responsive(tables) {
+            padding-top: 10.2rem;
+            padding-bottom: 10.3rem;
+        }
+    }
+    &__title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 4.8rem;
+        line-height: 1.18;
+        margin-bottom: 5rem;
+        color: $white-color;
+        transition: .3s ease;
+        transition-delay: 0.2s;
+        &:hover {
+            color: yellowgreen;
+        }
+        @include responsive(m-phone) {
+            font-size: 3.8rem;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        color: $white-color;
+        margin-bottom: 5rem;
+    }
+}

@@ -1,0 +1,84 @@
+.special {
+    &:last-child {
+        margin-bottom: 8.1rem;
+    }
+    margin-bottom: 10rem;
+    @include container;
+    &__title {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 1.17;
+        color: $text-color;
+        margin-bottom: 3.8rem;
+    }
+    &__list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 3rem;
+        @include responsive(phone-jr) {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+    @include responsive(m-phone) {  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    }
+    &__item {
+        width: 100%;
+        max-width: 255px;
+        padding: 2.5rem 3rem;
+        background-color: $white-color;
+        text-align: center;
+        box-shadow: 0rem 0rem .7rem $primary-color;
+        margin-right: auto;margin-left: auto;
+    @include responsive(phone-jr) {
+        padding: 2.5rem 1.5rem;
+    }
+    @include responsive(m-desktop) {
+        &:last-child {
+        display: none;
+        }
+    }
+    @include responsive(tables-jr) {
+        &:nth-child(3) {
+        display: none;
+        }
+    }
+    @include responsive(m-phone) {
+        &:nth-child(2) {
+        display: none;
+        }
+    }
+    }
+    &__img {
+        width: 125px;
+        height: 166px;
+        object-fit: contain;
+        margin-bottom: 2rem;
+        &:hover {
+            opacity: .8;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        margin-bottom: 2rem;
+        color: $three-color;    
+    }
+    &__price {
+        font-weight: 500;
+        font-size: 2.1rem;
+        line-height: 1.17;
+        letter-spacing: 5%;
+        color: $text-color;
+        margin-bottom: 2rem;
+    }
+}
+@include responsive(m-phone) {
+    .special__item:last-child {
+        display: none;
+    }
+}

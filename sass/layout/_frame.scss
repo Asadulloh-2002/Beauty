@@ -1,0 +1,80 @@
+.frame {
+    @include container;
+    margin-bottom: 10rem;
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        @include responsive(tables) {
+            flex-direction: column;
+        }
+    }
+    &__item {
+        width: 100%;
+        max-width: 540px;
+        background-color: $primary-color;
+        padding: 3.5rem 4.5rem 3.5rem 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $white-color;
+        &:first-child {
+            margin-right: 1.5rem;
+            @include responsive(tables) {
+                margin-right: 0;
+                margin-bottom: 2.5rem;
+            }
+        }
+        @include responsive(m-desktop) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+        @include responsive(tables) {
+            flex-direction: row;
+            text-align: start;
+        }
+        @include responsive(phone) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 1.8rem; 
+        line-height: 1.17;
+        margin-bottom: 2.5rem;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 1.4rem; 
+        line-height: 1.17;
+        margin-bottom: 2.5rem;
+    }
+    &__input {
+        width: 85%;
+        padding: 1.1rem 2.5rem;
+        border-radius: 3rem;
+        border: none;
+        font-size: 1.4rem;
+        line-height: 1.17;
+        &::placeholder {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.17;
+            color: #c4c4c4;
+        }
+    }
+    &__img {
+        object-fit: contain;
+        @include responsive(m-desktop) {
+            margin-bottom: 2.5rem;
+        }
+        @include responsive(tables) {
+            margin-bottom: 0;
+        }
+        @include responsive(phone) {
+            margin-bottom: 2.5rem;
+        }
+    }
+}

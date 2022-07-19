@@ -1,0 +1,88 @@
+.header {
+    padding: 2rem 0;
+    @include container;
+    display: flex;
+    align-items: center;
+    @include responsive(middle-table) {
+        flex-direction: column;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        &:hover {
+            opacity: .8;
+        }
+        &:active {
+            opacity: .6;
+        }
+        @include responsive(middle-table) {
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 2rem;
+        }
+    }
+    span {
+        width: 80px;
+        height: 80px;
+        display: inline-block;
+        background-image: url("../images/svg/site-logo.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-right: 2rem;
+    }
+    &__logo {
+        width: 158px;
+        height: 39px;
+        object-fit: contain;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        @include responsive(m-tables) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    input {
+        border-radius: 4rem;
+        border: none;
+        background-color: #efefef;
+        padding: 1.1rem 2rem;
+        background-image: url("../images/svg/search-icon.svg");
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: left;
+        background-position-x: 2rem;
+        margin-right: 9.3rem;
+        font-size: 1.6rem;
+        @include responsive(big-tables) {
+            margin-right: 3.5rem;
+        }
+        @include responsive(m-tables) {
+            margin-right: 0;
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__tel-text {
+        font-size: 1.6rem;
+        line-height: 1.17;
+        color: $text-color;
+        margin-right: 4rem;
+        &:hover {
+            color: $primary-color;
+        }
+        @include responsive(big-tables) {
+            margin-right: 1.5rem;
+        }
+        @include responsive(m-tables) {
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+    }
+}
+hr {
+    border: none;
+    border-bottom: 1px solid #efefef;
+}
